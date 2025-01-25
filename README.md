@@ -1,24 +1,40 @@
-# AI Chatbot
+# Keshava AI - Your Spiritual Guide
 
-A simple AI chatbot using OpenAI's API.
+A conversational AI chatbot that provides insights and guidance based on Indian philosophy and spirituality.
+
+## Features
+
+- Powered by Google's Gemini AI
+- Beautiful Streamlit interface
+- Deep understanding of Indian culture and philosophy
+- Real-time chat interactions
+- Responsive design
 
 ## Setup
 
-1. Install the required dependencies:
+1. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-2. Create a `.env` file in the project root and add your OpenAI API key:
-   ```
-   OPENAI_API_KEY=your_api_key_here
-   ```
+2. Set up your environment variables:
+   - Create a `.env` file
+   - Add your Google API key:
+     ```
+     GOOGLE_API_KEY=your_api_key_here
+     ```
 
-3. Run the chatbot:
+3. Run the application:
    ```
-   python chatbot.py
+   streamlit run streamlit_app.py
    ```
 
 ## Usage
 
-Simply type your message and press Enter to chat with the AI. Type 'quit' to exit the program.
+Simply type your message in the chat input and press Enter or click Send. Ask questions about:
+- Indian philosophy
+- Spiritual teachings
+- Cultural traditions
+- General life advice with an Indian perspective
+
+Made with ❤️ and spiritual wisdom

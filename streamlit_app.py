@@ -74,7 +74,10 @@ for message in st.session_state.messages:
             st.markdown(f'<div class="chat-message bot-message">Keshava: {message["content"]}</div>', unsafe_allow_html=True)
 
 # Chat input
-user_input = st.text_input("Type your message here...", key="user_input")
+if "user_input" not in st.session_state:
+    st.session_state.user_input = ""
+
+user_input = st.text_input("Type your message here...", key="user_input_widget")
 
 if st.button("Send") or user_input:
     if user_input:
@@ -95,8 +98,8 @@ if st.button("Send") or user_input:
             # Add AI response to chat history
             st.session_state.messages.append({"role": "assistant", "content": response.text})
             
-            # Clear input
-            st.session_state.user_input = ""
+            # Clear input using javascript
+            st.markdown('<script>document.querySelector("input[type=\'text\']").value = "";</script>', unsafe_allow_html=True)
             
             # Rerun to update chat display
             st.rerun()
